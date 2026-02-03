@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaSphere – Premium Plans</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+  background:radial-gradient(circle at top,#020617,#000);
+  color:#fff;
+}
+
+.header{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.header h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.header p{
+  opacity:.8;
+  font-size:16px;
+}
+
+.plans{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  padding:40px;
+}
+
+.plan{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:28px;
+  padding:36px;
+  position:relative;
+  transition:.3s;
+}
+
+.plan:hover{
+  transform:translateY(-8px);
+}
+
+.plan.popular{
+  background:linear-gradient(135deg,#6366f1,#22d3ee);
+  color:#000;
+}
+
+.badge{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:#000;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.plan h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:40px;
+  font-weight:700;
+  margin:20px 0;
+}
+
+.price span{
+  font-size:14px;
+  font-weight:400;
+}
+
+.features{
+  list-style:none;
+  margin:20px 0 30px;
+}
+
+.features li{
+  margin-bottom:12px;
+  font-size:14px;
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  font-weight:600;
+  cursor:pointer;
+  background:#fff;
+  color:#000;
+}
+
+.plan.popular .btn{
+  background:#000;
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Choose Your Experience</h1>
+  <p>Unlock powerful features designed for modern communities</p>
+</div>
+
+<div class="plans">
+
+  <div class="plan">
+    <h3>Free</h3>
+    <div class="price">$0 <span>/month</span></div>
+    <ul class="features">
+      <li>✔ Basic Feed & Chat</li>
+      <li>✔ Limited Communities</li>
+      <li>✔ Standard Profile</li>
+    </ul>
+    <button class="btn">Get Started</button>
+  </div>
+
+  <div class="plan popular">
+    <div class="badge">MOST POPULAR</div>
+    <h3>Pro</h3>
+    <div class="price">$19 <span>/month</span></div>
+    <ul class="features">
+      <li>✔ Unlimited Chats</li>
+      <li>✔ Advanced Feed</li>
+      <li>✔ Creator Tools</li>
+      <li>✔ Priority Support</li>
+    </ul>
+    <button class="btn">Upgrade Now</button>
+  </div>
+
+  <div class="plan">
+    <h3>Enterprise</h3>
+    <div class="price">$99 <span>/month</span></div>
+    <ul class="features">
+      <li>✔ Private Networks</li>
+      <li>✔ Admin Dashboard</li>
+      <li>✔ Custom Branding</li>
+      <li>✔ Dedicated Support</li>
+    </ul>
+    <button class="btn">Contact Sales</button>
+  </div>
+
+</div>
+
+</body>
+  </html>
