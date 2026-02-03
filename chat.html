@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaSphere – Chat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+background:#0b0f1a;
+color:#fff;
+display:flex;
+flex-direction:column;
+height:100vh;
+}
+
+header{
+padding:16px 20px;
+background:#11162a;
+font-weight:600;
+font-size:18px;
+}
+
+.chat-box{
+flex:1;
+padding:20px;
+overflow-y:auto;
+}
+
+.msg{
+max-width:75%;
+margin-bottom:14px;
+padding:14px 16px;
+border-radius:18px;
+font-size:14px;
+line-height:1.4;
+}
+
+.user{
+background:linear-gradient(135deg,#6a7bff,#4fd1c5);
+margin-left:auto;
+border-bottom-right-radius:4px;
+}
+
+.bot{
+background:#1c233d;
+border-bottom-left-radius:4px;
+}
+
+.typing{
+font-size:12px;
+opacity:.6;
+margin-bottom:10px;
+}
+
+.input-area{
+display:flex;
+padding:14px;
+background:#11162a;
+gap:10px;
+}
+
+input{
+flex:1;
+padding:14px;
+border-radius:14px;
+border:none;
+outline:none;
+background:#1c233d;
+color:#fff;
+}
+
+button{
+padding:14px 20px;
+border-radius:14px;
+border:none;
+cursor:pointer;
+font-weight:600;
+background:linear-gradient(135deg,#6a7bff,#4fd1c5);
+color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<header>NovaSphere Chat</header>
+
+<div class="chat-box" id="chat">
+  <div class="msg bot">👋 Welcome to NovaSphere. How can I help you today?</div>
+</div>
+
+<div class="input-area">
+  <input type="text" id="input" placeholder="Type a message…" />
+  <button onclick="sendMsg()">Send</button>
+</div>
+
+<script>
+const chat = document.getElementById("chat");
+const input = document.getElementById("input");
+
+function sendMsg(){
+ if(input.value.trim()==="") return;
+
+ let userMsg = document.createElement("div");
+ userMsg.className = "msg user";
+ userMsg.innerText = input.value;
+ chat.appendChild(userMsg);
+
+ input.value="";
+ chat.scrollTop = chat.scrollHeight;
+
+ let typing = document.createElement("div");
+ typing.className="typing";
+ typing.innerText="NovaSphere is typing…";
+ chat.appendChild(typing);
+
+ setTimeout(()=>{
+   typing.remove();
+   let botMsg = document.createElement("div");
+   botMsg.className="msg bot";
+   botMsg.innerText="Thanks for reaching out 🚀 This is a demo auto-response. Backend integration will enable real-time chat.";
+   chat.appendChild(botMsg);
+   chat.scrollTop = chat.scrollHeight;
+ },1500);
+}
+</script>
+
+</body>
+  </html>
