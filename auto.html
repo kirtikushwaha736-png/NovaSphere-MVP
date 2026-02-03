@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaSphere – Initializing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:50px;
+  text-align:center;
+  backdrop-filter:blur(22px);
+  box-shadow:0 50px 140px rgba(0,0,0,0.65);
+}
+
+.logo{
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  margin-bottom:12px;
+}
+
+.subtitle{
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:40px;
+}
+
+.loader{
+  width:100%;
+  height:10px;
+  background:rgba(255,255,255,0.08);
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:28px;
+}
+
+.progress{
+  width:0%;
+  height:100%;
+  background:linear-gradient(135deg,#5f8cff,#7b61ff);
+  border-radius:10px;
+  animation:load 5s forwards;
+}
+
+@keyframes load{
+  to{ width:100%; }
+}
+
+.steps{
+  text-align:left;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.step{
+  opacity:0.4;
+  margin-bottom:8px;
+  animation:stepFade 1s forwards;
+}
+
+.step:nth-child(1){ animation-delay:0.5s;}
+.step:nth-child(2){ animation-delay:1.5s;}
+.step:nth-child(3){ animation-delay:2.5s;}
+.step:nth-child(4){ animation-delay:3.5s;}
+
+@keyframes stepFade{
+  to{ opacity:1; }
+}
+
+.final-btn{
+  margin-top:40px;
+  display:none;
+  padding:14px 34px;
+  border-radius:16px;
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#fff;
+  font-size:15px;
+  font-weight:600;
+  box-shadow:0 14px 50px rgba(34,197,94,0.45);
+}
+
+.final-btn:hover{
+  transform:translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="logo">NovaSphere</div>
+  <div class="subtitle">Setting up your social experience</div>
+
+  <div class="loader">
+    <div class="progress"></div>
+  </div>
+
+  <div class="steps">
+    <div class="step">✔ Initializing secure environment</div>
+    <div class="step">✔ Connecting real-time systems</div>
+    <div class="step">✔ Preparing personalized feed</div>
+    <div class="step">✔ Finalizing user workspace</div>
+  </div>
+
+  <button class="final-btn" onclick="location.href='feed.html'">
+    Enter NovaSphere
+  </button>
+</div>
+
+<script>
+setTimeout(()=>{
+  document.querySelector('.final-btn').style.display='inline-block';
+},5200);
+</script>
+
+</body>
+</html>
