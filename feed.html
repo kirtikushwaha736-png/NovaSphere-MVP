@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaSphere – Feed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+  background:#020617;
+  color:#fff;
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  width:260px;
+  height:100vh;
+  background:#020617;
+  border-right:1px solid rgba(255,255,255,0.08);
+  padding:28px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.nav a{
+  display:block;
+  padding:14px 18px;
+  margin-bottom:12px;
+  border-radius:14px;
+  color:#cbd5f5;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.nav a:hover{
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+}
+
+/* Feed */
+.feed{
+  flex:1;
+  padding:40px;
+  max-width:720px;
+}
+
+.post{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:24px;
+  margin-bottom:28px;
+}
+
+.user{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.content{
+  opacity:.9;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+
+.actions{
+  display:flex;
+  gap:20px;
+  font-size:14px;
+  opacity:.7;
+}
+
+/* Right Panel */
+.right{
+  width:320px;
+  padding:40px 30px;
+  border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:22px;
+  border-radius:22px;
+  margin-bottom:24px;
+}
+
+.card h4{
+  margin-bottom:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="logo">NovaSphere</div>
+  <div class="nav">
+    <a href="feed.html">🏠 Feed</a>
+    <a href="chat.html">💬 Messages</a>
+    <a href="#">👤 Profile</a>
+    <a href="#">⚙️ Settings</a>
+  </div>
+</div>
+
+<div class="feed">
+  <div class="post">
+    <div class="user">NovaSphere Team</div>
+    <div class="content">
+      Welcome to NovaSphere — a next-gen social experience designed for private communities, creators & premium networks.
+    </div>
+    <div class="actions">
+      ❤️ Like · 💬 Comment · 🔁 Share
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="user">Alex Morgan</div>
+    <div class="content">
+      This platform feels insanely smooth. UI is clean, premium & distraction-free.
+    </div>
+    <div class="actions">
+      ❤️ Like · 💬 Comment · 🔁 Share
+    </div>
+  </div>
+</div>
+
+<div class="right">
+  <div class="card">
+    <h4>Trending</h4>
+    <p>#NovaSphere</p>
+    <p>#PrivateCommunities</p>
+    <p>#NextGenSocial</p>
+  </div>
+
+  <div class="card">
+    <h4>Suggestions</h4>
+    <p>👤 Sarah</p>
+    <p>👤 Daniel</p>
+    <p>👤 Olivia</p>
+  </div>
+</div>
+
+</body>
+</html>
