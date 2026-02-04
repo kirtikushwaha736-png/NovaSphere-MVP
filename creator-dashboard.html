@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaSphere – Creator Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+  background:#020617;
+  color:#fff;
+}
+
+.header{
+  padding:30px 40px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.header h1{
+  font-size:28px;
+}
+
+.dashboard{
+  max-width:1200px;
+  margin:auto;
+  padding:40px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:22px;
+  padding:28px;
+}
+
+.card h3{
+  font-size:14px;
+  opacity:.7;
+}
+
+.card p{
+  font-size:32px;
+  font-weight:700;
+  margin-top:10px;
+}
+
+.section{
+  margin-top:50px;
+}
+
+.section h2{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(255,255,255,0.04);
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.table th,.table td{
+  padding:16px;
+  text-align:left;
+  font-size:14px;
+}
+
+.table th{
+  background:rgba(255,255,255,0.08);
+}
+
+.status{
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  background:#22c55e;
+  color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Creator Dashboard</h1>
+</div>
+
+<div class="dashboard">
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Earnings</h3>
+      <p>$12,480</p>
+    </div>
+    <div class="card">
+      <h3>Subscribers</h3>
+      <p>1,248</p>
+    </div>
+    <div class="card">
+      <h3>Monthly Growth</h3>
+      <p>+32%</p>
+    </div>
+    <div class="card">
+      <h3>Active Posts</h3>
+      <p>86</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Recent Transactions</h2>
+    <table class="table">
+      <tr>
+        <th>User</th>
+        <th>Plan</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Alex Morgan</td>
+        <td>Pro</td>
+        <td>$19</td>
+        <td><span class="status">Paid</span></td>
+      </tr>
+      <tr>
+        <td>Sophia Lee</td>
+        <td>Enterprise</td>
+        <td>$99</td>
+        <td><span class="status">Paid</span></td>
+      </tr>
+      <tr>
+        <td>Daniel Cruz</td>
+        <td>Pro</td>
+        <td>$19</td>
+        <td><span class="status">Paid</span></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+</body>
+  </html>
